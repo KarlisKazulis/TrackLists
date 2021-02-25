@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		AA8F53CB25CAD03E005DCD19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53CA25CAD03E005DCD19 /* AppDelegate.swift */; };
 		AA8F53CD25CAD03E005DCD19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53CC25CAD03E005DCD19 /* SceneDelegate.swift */; };
-		AA8F53CF25CAD03E005DCD19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53CE25CAD03E005DCD19 /* ViewController.swift */; };
 		AA8F53D225CAD03E005DCD19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8F53D025CAD03E005DCD19 /* Main.storyboard */; };
 		AA8F53D425CAD040005DCD19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8F53D325CAD040005DCD19 /* Assets.xcassets */; };
 		AA8F53D725CAD040005DCD19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA8F53D525CAD040005DCD19 /* LaunchScreen.storyboard */; };
+		AA8F53E625CAD3A2005DCD19 /* TrackListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53E525CAD3A2005DCD19 /* TrackListTableViewController.swift */; };
+		AA8F53EA25CAD3EC005DCD19 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53E925CAD3EC005DCD19 /* DetailViewController.swift */; };
+		AA8F53ED25CADD3B005DCD19 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53EC25CADD3B005DCD19 /* Song.swift */; };
+		AA8F53F025CADE45005DCD19 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8F53EF25CADE45005DCD19 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AA8F53C725CAD03E005DCD19 /* TrackLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA8F53CA25CAD03E005DCD19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA8F53CC25CAD03E005DCD19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA8F53CE25CAD03E005DCD19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA8F53D125CAD03E005DCD19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA8F53D325CAD040005DCD19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA8F53D625CAD040005DCD19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA8F53D825CAD040005DCD19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8F53E525CAD3A2005DCD19 /* TrackListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListTableViewController.swift; sourceTree = "<group>"; };
+		AA8F53E925CAD3EC005DCD19 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AA8F53EC25CADD3B005DCD19 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		AA8F53EF25CADE45005DCD19 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		AA8F53C925CAD03E005DCD19 /* TrackLists */ = {
 			isa = PBXGroup;
 			children = (
-				AA8F53CA25CAD03E005DCD19 /* AppDelegate.swift */,
-				AA8F53CC25CAD03E005DCD19 /* SceneDelegate.swift */,
-				AA8F53CE25CAD03E005DCD19 /* ViewController.swift */,
-				AA8F53D025CAD03E005DCD19 /* Main.storyboard */,
+				AA8F53DF25CAD0AF005DCD19 /* Delegate */,
+				AA8F53E325CAD165005DCD19 /* ModelManager */,
+				AA8F53E225CAD14F005DCD19 /* Model */,
+				AA8F53E025CAD102005DCD19 /* View */,
+				AA8F53E125CAD12E005DCD19 /* Controllers */,
 				AA8F53D325CAD040005DCD19 /* Assets.xcassets */,
-				AA8F53D525CAD040005DCD19 /* LaunchScreen.storyboard */,
 				AA8F53D825CAD040005DCD19 /* Info.plist */,
 			);
 			path = TrackLists;
+			sourceTree = "<group>";
+		};
+		AA8F53DF25CAD0AF005DCD19 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F53CA25CAD03E005DCD19 /* AppDelegate.swift */,
+				AA8F53CC25CAD03E005DCD19 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		AA8F53E025CAD102005DCD19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F53D025CAD03E005DCD19 /* Main.storyboard */,
+				AA8F53D525CAD040005DCD19 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA8F53E125CAD12E005DCD19 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F53E525CAD3A2005DCD19 /* TrackListTableViewController.swift */,
+				AA8F53E925CAD3EC005DCD19 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AA8F53E225CAD14F005DCD19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F53EC25CADD3B005DCD19 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA8F53E325CAD165005DCD19 /* ModelManager */ = {
+			isa = PBXGroup;
+			children = (
+				AA8F53EF25CADE45005DCD19 /* DataManager.swift */,
+			);
+			path = ModelManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8F53CF25CAD03E005DCD19 /* ViewController.swift in Sources */,
 				AA8F53CB25CAD03E005DCD19 /* AppDelegate.swift in Sources */,
+				AA8F53F025CADE45005DCD19 /* DataManager.swift in Sources */,
 				AA8F53CD25CAD03E005DCD19 /* SceneDelegate.swift in Sources */,
+				AA8F53E625CAD3A2005DCD19 /* TrackListTableViewController.swift in Sources */,
+				AA8F53EA25CAD3EC005DCD19 /* DetailViewController.swift in Sources */,
+				AA8F53ED25CADD3B005DCD19 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
